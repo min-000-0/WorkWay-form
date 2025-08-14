@@ -1,0 +1,21 @@
+.footer {
+  border-top: none;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      // 左側透明
+      #d1d9e1 50%,
+      // 中間灰色 (設計稿的顏色)
+      transparent 100% // 右側透明
+    );
+  }
+}

@@ -1,0 +1,23 @@
+// Bootstrap Functions
+@import "../../node_modules/bootstrap/scss/functions";
+
+// 變數、通用樣式
+@import "./helper/variables";
+@import "./helper/spacing";
+
+// 第三方套件
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+// 自定義 utilities
+@import "./helper/utilities";
+@import "./helper/typography";
+
+// Base 樣式
+@import "./base/base";
+
+// Layout 元件
+@import "./layout/header";
+@import "./layout/footer";
+
+// Pages 樣式
+@import "./pages/index";

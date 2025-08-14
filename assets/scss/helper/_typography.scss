@@ -1,0 +1,124 @@
+// Desktop Typography
+@each $name, $size in $font-sizes-desktop {
+  .text-#{$name} {
+    font-size: #{$size};
+  }
+}
+
+// Mobile Typography (responsive)
+@include media-breakpoint-down(md) {
+  @each $name, $size in $font-sizes-mobile {
+    .text-#{$name} {
+      font-size: #{$size};
+    }
+  }
+}
+
+// Font Weights
+.font-regular {
+  font-weight: 400;
+}
+.font-bold {
+  font-weight: 700;
+}
+
+// Line Heights
+.leading-tight {
+  line-height: 120%;
+}
+.leading-normal {
+  line-height: 150%;
+}
+
+// Combined Classes (建議的語義化組合)
+.display {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 120%;
+
+  @include media-breakpoint-down(md) {
+    font-size: 48px;
+  }
+}
+
+.title-5xl {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 120%;
+
+  @include media-breakpoint-down(md) {
+    font-size: 32px;
+  }
+}
+
+.title-4xl {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 120%;
+
+  @include media-breakpoint-down(md) {
+    font-size: 28px;
+  }
+}
+
+.title-3xl {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 120%;
+
+  @include media-breakpoint-down(md) {
+    font-size: 24px;
+  }
+}
+
+.title-2xl {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+
+  @include media-breakpoint-down(md) {
+    font-size: 20px;
+  }
+}
+
+.title-xl {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 120%;
+
+  @include media-breakpoint-down(md) {
+    font-size: 18px;
+  }
+}
+
+.body-lg {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+
+  @include media-breakpoint-down(md) {
+    font-size: 16px;
+  }
+}
+
+.body-md {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+
+  @include media-breakpoint-down(md) {
+    font-size: 14px;
+  }
+}
+
+.body-sm {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.body-xs {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 150%;
+}

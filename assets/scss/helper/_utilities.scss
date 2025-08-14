@@ -1,0 +1,601 @@
+// ==============================================
+// Component-Specific Utilities (修正版 - 基於正確的設計規範)
+// ==============================================
+
+// ==============================================
+// Global Background Colors (根據設計規範修正)
+// ==============================================
+
+.bg-global-primary {
+  background-color: $primary-40 !important;
+} // Global-primary (藍色)
+.bg-global-secondary {
+  background-color: $natural-95 !important;
+} // Global-secondary (淺灰色) ✅ 修正
+.bg-global-light {
+  background-color: $white !important;
+} // Global-light (White)
+.bg-global-default {
+  background-color: $black !important;
+} // Global-default (Black)
+.bg-global-deep {
+  background-color: $white !important;
+} // Global-deep (White)
+.bg-global-error {
+  background-color: $danger-45 !important;
+} // Global-error (紅色)
+
+// Global Background Action Colors
+.bg-global-action-primary {
+  background-color: $primary-40 !important;
+} // Global-Background-action-primary (藍色)
+.bg-global-action-secondary {
+  background-color: $secondary-90 !important;
+} // Global-Background-action-secondary (淺綠色)
+
+// Global Border Colors
+.border-global-primary {
+  border-color: $natural-85 !important;
+} // Global-Border-primary (淺灰邊框)
+.border-global-secondary {
+  border-color: $primary-40 !important;
+} // Global-Border-secondary (藍色邊框)
+
+// ==============================================
+// Global Text Colors (根據設計規範修正)
+// ==============================================
+
+.text-global-primary {
+  color: $black !important;
+} // Global-Text-primary (Black)
+.text-global-secondary {
+  color: $natural-50 !important;
+} // Global-Text-secondary (中灰)
+.text-global-hover-primary {
+  color: $primary-40 !important;
+} // Global-Text-hover-primary (藍色)
+.text-global-display-primary {
+  color: $white !important;
+} // Global-Text-display-primary (White)
+.text-global-error {
+  color: $danger-45 !important;
+} // Global-Text-error (紅色)
+.text-global-finish {
+  color: $natural-50 !important;
+} // Global-Text-finish (中灰)
+
+// ==============================================
+// Button Utilities (根據設計規範修正)
+// ==============================================
+
+// Button Background Colors
+.bg-btn-defaulting {
+  background-color: $black !important;
+} // Button-defaulting (Black)
+.bg-btn-defaulting-hover {
+  background-color: $secondary-50 !important;
+} // Button-defaulting-hover (Global-secondary 綠色) ✅ 修正
+
+.bg-btn-ghosting {
+  background-color: $white !important;
+} // Button-ghosting (White)
+.bg-btn-ghosting-hover {
+  background-color: $natural-90 !important;
+} // Button-ghosting-hover (淺灰)
+
+.bg-btn-succeeding {
+  background-color: $success-45 !important;
+} // Button-succeeding (綠色)
+.bg-btn-succeeding-hover {
+  background-color: $success-70 !important;
+} // Button-succeeding-hover (亮綠)
+
+.bg-btn-dangering {
+  background-color: $danger-70 !important;
+} // Button-dangering (亮紅)
+.bg-btn-dangering-hover {
+  background-color: $danger-45 !important;
+} // Button-dangering-hover (深紅)
+
+.bg-btn-warning {
+  background-color: $warning-45 !important;
+} // Button-warning-bg (深橘)
+.bg-btn-warning-hover {
+  background-color: $warning-70 !important;
+} // Button-warning-bg-hover (亮橘)
+
+.bg-btn-disabling {
+  background-color: $natural-75 !important;
+} // Button-disabling (中灰)
+.bg-btn-disabling-hover {
+  background-color: $natural-50 !important;
+} // Button-disabling-hover (深灰)
+
+// Button Text Colors (搭配背景使用)
+.text-btn-defaulting {
+  color: $white !important;
+} // 黑色按鈕配白字
+.text-btn-ghosting {
+  color: $black !important;
+} // 白色按鈕配黑字
+.text-btn-succeeding {
+  color: $white !important;
+} // 成功按鈕配白字
+.text-btn-dangering {
+  color: $white !important;
+} // 危險按鈕配白字
+.text-btn-warning {
+  color: $white !important;
+} // 警告按鈕配白字
+.text-btn-disabling {
+  color: $natural-50 !important;
+} // 禁用按鈕灰字
+
+// ==============================================
+// Input Utilities (根據設計規範修正)
+// ==============================================
+
+// Input Background Colors
+.bg-input-defaulting {
+  background-color: $white !important;
+} // Input-defaulting (White)
+.bg-input-flag-bg {
+  background-color: $danger-90 !important;
+} // Input-flag-bg (淺紅背景)
+.bg-input-disabling {
+  background-color: $natural-75 !important;
+} // Input-disabling (中灰)
+
+// Input Border Colors
+.border-input-defaulting {
+  border-color: $natural-95 !important;
+} // Input-defaulting-border (很淺灰)
+.border-input-activeborder-outline {
+  border-color: $primary-90 !important;
+} // Input-activeborder-outline (很淺藍)
+.border-input-activeborder {
+  border-color: $primary-40 !important;
+} // Input-activeborder (藍色)
+.border-input-errorborder {
+  border-color: $danger-45 !important;
+} // Input-errorborder (紅色)
+
+// ==============================================
+// Complete Button Theme Classes (修正版組合)
+// ==============================================
+
+.btn-theme-defaulting {
+  background-color: $black !important;
+  color: $white !important;
+  border-color: $black !important;
+
+  &:hover,
+  &:focus {
+    background-color: $secondary-50 !important; // ✅ 修正：hover 是綠色
+    border-color: $secondary-50 !important;
+    color: $black !important;
+  }
+}
+
+.btn-theme-ghosting {
+  background-color: $white !important;
+  color: $black !important;
+  border-color: $natural-85 !important;
+
+  &:hover,
+  &:focus {
+    background-color: $natural-90 !important;
+    border-color: $natural-75 !important;
+  }
+}
+
+.btn-theme-succeeding {
+  background-color: $success-45 !important;
+  color: $white !important;
+  border-color: $success-45 !important;
+
+  &:hover,
+  &:focus {
+    background-color: $success-70 !important;
+    border-color: $success-70 !important;
+  }
+}
+
+.btn-theme-dangering {
+  background-color: $danger-70 !important;
+  color: $white !important;
+  border-color: $danger-70 !important;
+
+  &:hover,
+  &:focus {
+    background-color: $danger-45 !important;
+    border-color: $danger-45 !important;
+  }
+}
+
+.btn-theme-warning {
+  background-color: $warning-45 !important;
+  color: $white !important;
+  border-color: $warning-45 !important;
+
+  &:hover,
+  &:focus {
+    background-color: $warning-70 !important;
+    border-color: $warning-70 !important;
+  }
+}
+
+.btn-theme-disabling {
+  background-color: $natural-75 !important;
+  color: $natural-50 !important;
+  border-color: $natural-75 !important;
+  cursor: not-allowed !important;
+
+  &:hover,
+  &:focus {
+    background-color: $natural-50 !important;
+    border-color: $natural-50 !important;
+  }
+}
+
+// ==============================================
+// Input Theme Classes (修正版組合)
+// ==============================================
+
+.input-theme-defaulting {
+  background-color: $white !important;
+  border-color: $natural-95 !important;
+  color: $black !important;
+
+  &:focus {
+    border-color: $primary-40 !important;
+    box-shadow: 0 0 0 0.2rem rgba($primary-40, 0.25) !important;
+    outline: 2px solid $primary-90 !important;
+    outline-offset: 2px !important;
+  }
+
+  &:hover {
+    border-color: $natural-85 !important;
+  }
+}
+
+.input-theme-error {
+  background-color: $danger-90 !important;
+  border-color: $danger-45 !important;
+  color: $black !important;
+
+  &:focus {
+    border-color: $danger-45 !important;
+    box-shadow: 0 0 0 0.2rem rgba($danger-45, 0.25) !important;
+  }
+}
+
+.input-theme-disabling {
+  background-color: $natural-75 !important;
+  border-color: $natural-60 !important;
+  color: $natural-50 !important;
+  cursor: not-allowed !important;
+
+  &:focus,
+  &:hover {
+    border-color: $natural-60 !important;
+    box-shadow: none !important;
+  }
+}
+
+// ==============================================
+// Design System Color Utilities (完整色彩系統)
+// ==============================================
+
+// Natural Colors (灰階系統)
+.bg-natural-100 {
+  background-color: $natural-100 !important;
+}
+.bg-natural-95 {
+  background-color: $natural-95 !important;
+}
+.bg-natural-90 {
+  background-color: $natural-90 !important;
+}
+.bg-natural-85 {
+  background-color: $natural-85 !important;
+}
+.bg-natural-75 {
+  background-color: $natural-75 !important;
+}
+.bg-natural-60 {
+  background-color: $natural-60 !important;
+}
+.bg-natural-50 {
+  background-color: $natural-50 !important;
+}
+.bg-natural-30 {
+  background-color: $natural-30 !important;
+}
+.bg-natural-10 {
+  background-color: $natural-10 !important;
+}
+
+.text-natural-100 {
+  color: $natural-100 !important;
+}
+.text-natural-95 {
+  color: $natural-95 !important;
+}
+.text-natural-90 {
+  color: $natural-90 !important;
+}
+.text-natural-85 {
+  color: $natural-85 !important;
+}
+.text-natural-75 {
+  color: $natural-75 !important;
+}
+.text-natural-60 {
+  color: $natural-60 !important;
+}
+.text-natural-50 {
+  color: $natural-50 !important;
+}
+.text-natural-30 {
+  color: $natural-30 !important;
+}
+.text-natural-10 {
+  color: $natural-10 !important;
+}
+
+.border-natural-100 {
+  border-color: $natural-100 !important;
+}
+.border-natural-95 {
+  border-color: $natural-95 !important;
+}
+.border-natural-90 {
+  border-color: $natural-90 !important;
+}
+.border-natural-85 {
+  border-color: $natural-85 !important;
+}
+.border-natural-75 {
+  border-color: $natural-75 !important;
+}
+.border-natural-60 {
+  border-color: $natural-60 !important;
+}
+.border-natural-50 {
+  border-color: $natural-50 !important;
+}
+.border-natural-30 {
+  border-color: $natural-30 !important;
+}
+.border-natural-10 {
+  border-color: $natural-10 !important;
+}
+
+// Primary Colors (藍色系統)
+.bg-primary-97 {
+  background-color: $primary-97 !important;
+}
+.bg-primary-90 {
+  background-color: $primary-90 !important;
+}
+.bg-primary-80 {
+  background-color: $primary-80 !important;
+}
+.bg-primary-70 {
+  background-color: $primary-70 !important;
+}
+.bg-primary-60 {
+  background-color: $primary-60 !important;
+}
+.bg-primary-40 {
+  background-color: $primary-40 !important;
+}
+.bg-primary-25 {
+  background-color: $primary-25 !important;
+}
+
+.text-primary-97 {
+  color: $primary-97 !important;
+}
+.text-primary-90 {
+  color: $primary-90 !important;
+}
+.text-primary-80 {
+  color: $primary-80 !important;
+}
+.text-primary-70 {
+  color: $primary-70 !important;
+}
+.text-primary-60 {
+  color: $primary-60 !important;
+}
+.text-primary-40 {
+  color: $primary-40 !important;
+}
+.text-primary-25 {
+  color: $primary-25 !important;
+}
+
+.border-primary-97 {
+  border-color: $primary-97 !important;
+}
+.border-primary-90 {
+  border-color: $primary-90 !important;
+}
+.border-primary-80 {
+  border-color: $primary-80 !important;
+}
+.border-primary-70 {
+  border-color: $primary-70 !important;
+}
+.border-primary-60 {
+  border-color: $primary-60 !important;
+}
+.border-primary-40 {
+  border-color: $primary-40 !important;
+}
+.border-primary-25 {
+  border-color: $primary-25 !important;
+}
+
+// Secondary Colors (綠色系統)
+.bg-secondary-90 {
+  background-color: $secondary-90 !important;
+}
+.bg-secondary-70 {
+  background-color: $secondary-70 !important;
+}
+.bg-secondary-50 {
+  background-color: $secondary-50 !important;
+}
+.bg-secondary-35 {
+  background-color: $secondary-35 !important;
+}
+
+.text-secondary-90 {
+  color: $secondary-90 !important;
+}
+.text-secondary-70 {
+  color: $secondary-70 !important;
+}
+.text-secondary-50 {
+  color: $secondary-50 !important;
+}
+.text-secondary-35 {
+  color: $secondary-35 !important;
+}
+
+.border-secondary-90 {
+  border-color: $secondary-90 !important;
+}
+.border-secondary-70 {
+  border-color: $secondary-70 !important;
+}
+.border-secondary-50 {
+  border-color: $secondary-50 !important;
+}
+.border-secondary-35 {
+  border-color: $secondary-35 !important;
+}
+
+// Success Colors (成功狀態綠色)
+.bg-success-90 {
+  background-color: $success-90 !important;
+}
+.bg-success-70 {
+  background-color: $success-70 !important;
+}
+.bg-success-45 {
+  background-color: $success-45 !important;
+}
+
+.text-success-90 {
+  color: $success-90 !important;
+}
+.text-success-70 {
+  color: $success-70 !important;
+}
+.text-success-45 {
+  color: $success-45 !important;
+}
+
+.border-success-90 {
+  border-color: $success-90 !important;
+}
+.border-success-70 {
+  border-color: $success-70 !important;
+}
+.border-success-45 {
+  border-color: $success-45 !important;
+}
+
+// Danger Colors (錯誤狀態紅色)
+.bg-danger-90 {
+  background-color: $danger-90 !important;
+}
+.bg-danger-70 {
+  background-color: $danger-70 !important;
+}
+.bg-danger-45 {
+  background-color: $danger-45 !important;
+}
+
+.text-danger-90 {
+  color: $danger-90 !important;
+}
+.text-danger-70 {
+  color: $danger-70 !important;
+}
+.text-danger-45 {
+  color: $danger-45 !important;
+}
+
+.border-danger-90 {
+  border-color: $danger-90 !important;
+}
+.border-danger-70 {
+  border-color: $danger-70 !important;
+}
+.border-danger-45 {
+  border-color: $danger-45 !important;
+}
+
+// Warning Colors (警告狀態橘色)
+.bg-warning-90 {
+  background-color: $warning-90 !important;
+}
+.bg-warning-70 {
+  background-color: $warning-70 !important;
+}
+.bg-warning-45 {
+  background-color: $warning-45 !important;
+}
+
+.text-warning-90 {
+  color: $warning-90 !important;
+}
+.text-warning-70 {
+  color: $warning-70 !important;
+}
+.text-warning-45 {
+  color: $warning-45 !important;
+}
+
+.border-warning-90 {
+  border-color: $warning-90 !important;
+}
+.border-warning-70 {
+  border-color: $warning-70 !important;
+}
+.border-warning-45 {
+  border-color: $warning-45 !important;
+}
+
+// ==============================================
+// 特殊組合 Utilities (Footer 等)
+// ==============================================
+
+// Footer 專用 (使用 secondary-50 綠色)
+.bg-footer {
+  background-color: $secondary-50 !important;
+}
+.text-footer {
+  color: $natural-10 !important;
+}
+.text-footer-link {
+  color: $natural-30 !important;
+}
+
+.footer-theme {
+  background-color: $secondary-50 !important;
+  color: $natural-10 !important;
+
+  a {
+    color: $natural-30 !important;
+
+    &:hover {
+      color: $primary-40 !important;
+    }
+  }
+}
