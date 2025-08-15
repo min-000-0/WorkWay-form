@@ -1,35 +1,31 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+// 標籤的基本樣式
 body {
   font-family: "Noto Sans TC", sans-serif;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: $black;
-}
-
-a {
-  display: block;
-  text-decoration: none;
-  color: $black;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  color: #141a1f;
 }
 
 img {
-  vertical-align: middle;
   max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
 }
 
 p {
-  margin: 0;
+  padding-bottom: 0;
 }
