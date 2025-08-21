@@ -85,7 +85,7 @@
                 tabindex="0"
               >
                 <form>
-                  <div class="d-flex gap-4">
+                  <div class="d-flex gap-4 mb-5">
                     <!-- 左側標題 -->
                     <div class="flex-shrink-0 side-width">
                       <h2 class="fs-4 mb-3">個人資料</h2>
@@ -130,7 +130,9 @@
                       <div class="mb-4">
                         <p class="mb-2">性別</p>
                         <div class="px-2">
-                          <div class="form-check form-check-inline ps-0 me-4">
+                          <div
+                            class="form-check form-check-inline ps-0 me-4 mb-0"
+                          >
                             <input
                               class="gender"
                               type="radio"
@@ -143,7 +145,9 @@
                               >女性</label
                             >
                           </div>
-                          <div class="form-check form-check-inline ps-0 me-4">
+                          <div
+                            class="form-check form-check-inline ps-0 me-4 mb-0"
+                          >
                             <input
                               class="gender"
                               type="radio"
@@ -155,7 +159,9 @@
                               >男性</label
                             >
                           </div>
-                          <div class="form-check form-check-inline ps-0">
+                          <div
+                            class="form-check form-check-inline ps-0 me-4 mb-0"
+                          >
                             <input
                               class="gender"
                               type="radio"
@@ -170,9 +176,150 @@
                         </div>
                       </div>
                       <!-- 生日 -->
+                      <div class="mb-4">
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="birthday"
+                            placeholder="生日"
+                            value="2000/01/10"
+                          />
+                          <label for="birthday">生日</label>
+                        </div>
+                      </div>
+                      <!-- 密碼 -->
+                      <div class="mb-4">
+                        <p class="mb-2">密碼</p>
+                        <button
+                          type="button"
+                          class="btn btn-outline-secondary me-4 rounded-4 ps-4"
+                          data-bs-toggle="modal"
+                          data-bs-target="#changePasswordModal"
+                        >
+                          修改密碼<span
+                            class="material-icons-outlined ms-1 align-bottom"
+                          >
+                            keyboard_arrow_right
+                          </span>
+                        </button>
+                        <div
+                          class="modal"
+                          id="changePasswordModal"
+                          tabindex="-1"
+                        >
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title">更新密碼</h5>
+                                <button
+                                  type="button"
+                                  class="btn-close"
+                                  data-bs-dismiss="modal"
+                                  aria-label="Close"
+                                ></button>
+                              </div>
+                              <div class="modal-body p-4">
+                                <div class="form-floating mb-4">
+                                  <input
+                                    type="password"
+                                    class="form-control"
+                                    id="newPassword"
+                                    placeholder="新密碼"
+                                  />
+                                  <label for="newPassword">新密碼</label>
+                                </div>
+                                <div class="form-floating">
+                                  <input
+                                    type="password"
+                                    class="form-control"
+                                    id="confirmPassword"
+                                    placeholder="再次輸入密碼"
+                                  />
+                                  <label for="confirmPassword">再次密碼</label>
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button
+                                  type="button"
+                                  class="btn btn-dark me-4 rounded-4 ps-4"
+                                  data-bs-dismiss="modal"
+                                >
+                                  更新密碼<span
+                                    class="material-icons-outlined ms-1 align-bottom"
+                                  >
+                                    keyboard_arrow_right
+                                  </span>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 信箱 -->
+                      <div class="mb-4">
+                        <div class="form-floating mb-3">
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="floatingInput"
+                            placeholder="name@example.com"
+                            value="mokumaru@mail.com"
+                          />
+                          <label for="floatingInput">信箱</label>
+                          <div class="form-text" id="basic-addon4">
+                            盡量勿使用Yahoo或Hotmail郵件信箱，以免因擋信、漏信
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 聯絡電話 -->
+                      <div class="mb-4">
+                        <div class="form-floating">
+                          <input
+                            type="tel"
+                            class="form-control"
+                            id="tel"
+                            placeholder="聯絡電話"
+                            value="09-1234-5678"
+                          />
+                          <label for="tel">聯絡電話</label>
+                        </div>
+                      </div>
+                      <!-- 通訊地址 -->
+                      <div>
+                        <div class="form-floating">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="address"
+                            placeholder="通訊地址"
+                            value="高雄市三民區九如一路 87 號"
+                          />
+                          <label for="address">通訊地址</label>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </form>
+                <div class="d-flex justify-content-center">
+                  <button
+                    type="button"
+                    class="btn btn-outline-secondary me-4 rounded-4 ps-4"
+                  >
+                    重新填寫<span
+                      class="material-icons-outlined ms-1 align-bottom"
+                    >
+                      keyboard_arrow_right
+                    </span>
+                  </button>
+                  <button type="button" class="btn btn-dark rounded-4 ps-4">
+                    儲存更新<span
+                      class="material-icons-outlined ms-1 align-bottom"
+                    >
+                      keyboard_arrow_right
+                    </span>
+                  </button>
+                </div>
               </div>
               <!-- record -->
               <div
@@ -259,7 +406,7 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row">職涯定位-職涯探索包 | 6/6堂</th>
+                      <td>職涯定位-職涯探索包 | 6/6堂</td>
                       <td>2025/11/11</td>
                       <td>60分鐘</td>
                       <td>
@@ -508,7 +655,6 @@
                             <li>
                               <a class="dropdown-item" href="#">3-5 年</a>
                             </li>
-                            <li><a class="dropdown-item" href="#">金融</a></li>
                             <li>
                               <a class="dropdown-item" href="#">5-10 年</a>
                             </li>
@@ -975,7 +1121,7 @@
                           <label
                             class="form-check-label"
                             for="serviceProjects-1"
-                            >職涯方向指導</label
+                            >探索定位</label
                           >
                         </div>
                         <div class="form-check form-check-inline me-4 mb-2">
@@ -988,7 +1134,7 @@
                           <label
                             class="form-check-label"
                             for="serviceProjects-2"
-                            >專業技能提升建議</label
+                            >客製化方案</label
                           >
                         </div>
                         <div class="form-check form-check-inline me-4 mb-2">
@@ -1001,7 +1147,7 @@
                           <label
                             class="form-check-label"
                             for="serviceProjects-3"
-                            >個人品牌建立</label
+                            >實戰指導</label
                           >
                         </div>
                       </div>
@@ -1263,9 +1409,7 @@
         </div>
       </div>
     </main>
-
     <%- include('./layout/footer'); -%>
-
     <script type="module" src="../main.js"></script>
   </body>
 </html>
